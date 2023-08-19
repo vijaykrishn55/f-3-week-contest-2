@@ -55,7 +55,7 @@ async function ShowData() {
   
    <nav>
         <div class="nav">
-          <h1>IP Address : <span id="IpAdd">127.0.01</span></h1>
+          <h1>IP Address : <span id="IpAdd">${IPAddress}</span></h1>
 
           <div class="information">
             <div class="lat">
@@ -84,7 +84,7 @@ async function ShowData() {
   `;
 
  
-  
+
   let datetime_str = new Date().toLocaleString("en-US", {
     timeZone: `${locationData.timezone}`,
   });
@@ -107,7 +107,7 @@ async function ShowData() {
           <h1>Post Offices Near You</h1>
           <div class="box">
             <input type="search" name="" id="searchBox" onkeyup="searchKey()"/>
-            <img src="./Vector (3).png" alt="" />
+            <img src="images/Vector (3).png" id="vector-img"alt="" />
           </div>
         </div>
         <div id="postalCard"></div>
@@ -115,6 +115,7 @@ async function ShowData() {
       postalCard = document.getElementById("postalCard");
       return res.PostOffice;
     })
+
     .then((data) => {
       console.log(data);
 
@@ -142,6 +143,7 @@ async function ShowData() {
 
 function searchKey() {
   postalCard.innerHTML = "";
+  
   var searchValue = document.getElementById("searchBox").value;
   // console.log(searchValue);
 
