@@ -68,7 +68,7 @@ async function ShowData() {
             </div>
             <div id="organisation">
               <h1>Organisation:${"  " + locationData.org}</h1>
-              <h1>Hostname:${"  "}Shiva Saini</h1>
+              <h1>Hostname:${"  "}vijay krishna</h1>
             </div>
           </div>
         </div>
